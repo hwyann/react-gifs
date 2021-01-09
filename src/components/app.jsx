@@ -1,47 +1,49 @@
 import React, { Component } from 'react';
+import giphy from 'giphy-api';
 import SearchForm from './SearchForm';
-import SelectedGif from './SelectedGif';
+import Gif from './Gif';
 import GifList from './GifList';
-import { GiphyFetch } from '@giphy/js-fetch-api';
-
-const giphy = require('giphy-api')('dSQXi3komwfcJt3mca7cXUJcdYOEVbJJ');
 
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      selectedGif: "QCJqrutxd2cDs2ii6X",
-      gifIdList: ["WuGSL4LFUMQU", "HuVCpmfKheI2Q", "u6uAu3yyDNqRq"]
+      gifIdList: [],
+      selectedGifId: "xT9IgDEI1iZyb2wqo8"
     };
-    this.fetchGiphy("star wars");
   }
 
-  fetchGiphy = (keyword) => {
-    giphy.search({
-      q: keyword,
+  search = (query) => {
+    giphy('dSQXi3komwfcJt3mca7cXUJcdYOEVbJJ').search({
+      q: query,
       rating: 'g',
       limit: 10
-    }, (err, res) => {
-      this.setState({ gifIdList: res.data.map(gif => gif.id) });
+    }, (error, result) => {
+      this.setState({
+        gifIdList: result.data.map(gif => gif.id)
+      });
     });
   }
 
-  changeSelectGif = (newSelectedGifId) => {
-    this.setState({ selectedGif: newSelectedGifId });
+  changeGif = (id) => {
+    this.setState({
+      selectedGifId: id
+    });
   }
 
   render() {
-    const { selectedGif, gifIdList } = this.state;
+    const { gifIdList, selectedGifId } = this.state;
     return (
       <div>
         <div className="left-scene">
-          <SearchForm fetchGiphy={this.fetchGiphy} />
+          <SearchForm search={this.search} />
           <div className="selected-gif">
-            <SelectedGif gifId={selectedGif} />
+            <Gif id={selectedGifId} />
           </div>
         </div>
         <div className="right-scene">
-          <GifList gifIdList={gifIdList} changeSelectGif={this.changeSelectGif} />
+          <GifList gifs={gifIdList} change={this.changeGif} />
         </div>
       </div>
     );

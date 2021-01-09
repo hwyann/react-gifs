@@ -694,6 +694,23 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@fortawesome/fontawesome-common-types@^0.2.32":
+  version "0.2.32"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.32.tgz#3436795d5684f22742989bfa08f46f50f516f259"
+  integrity sha512-ux2EDjKMpcdHBVLi/eWZynnPxs0BtFVXJkgHIxXRl+9ZFaHPvYamAfCzeeQFqHRjuJtX90wVnMRaMQAAlctz3w==
+
+"@fortawesome/fontawesome-free@^5.15.1":
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free/-/fontawesome-free-5.15.1.tgz#ccfef6ddbe59f8fe8f694783e1d3eb88902dc5eb"
+  integrity sha512-OEdH7SyC1suTdhBGW91/zBfR6qaIhThbcN8PUXtXilY4GYnSBbVqOntdHbC1vXwsDnX0Qix2m2+DSU1J51ybOQ==
+
+"@fortawesome/free-solid-svg-icons@^5.15.1":
+  version "5.15.1"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.15.1.tgz#e1432676ddd43108b41197fee9f86d910ad458ef"
+  integrity sha512-EFMuKtzRMNbvjab/SvJBaOOpaqJfdSap/Nl6hst7CgrJxwfORR1drdTV6q1Ib/JVzq4xObdTDcT6sqTaXMqfdg==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.2.32"
+
 "@giphy/js-analytics@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@giphy/js-analytics/-/js-analytics-2.0.0.tgz#5179d27c774ffa0329684c65a2f80fbc9ac4d3c5"
@@ -737,10 +754,10 @@
     "@giphy/js-types" "^3.0.0"
     dompurify "^2.2.2"
 
-"@giphy/react-components@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@giphy/react-components/-/react-components-2.0.1.tgz#cb50c1b09fd67b7e28cfcc7c0a48ba60cc500f7d"
-  integrity sha512-AmmFrRRnkRJi27nddzCxED8jUX6Nucgl98zWu89y+Dua3VVcqOB20p+/TrravOH3MOE3JW4j3FxjoxDxKLZrsw==
+"@giphy/react-components@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@giphy/react-components/-/react-components-2.1.0.tgz#5f3ea738549f8769efa5f351314246a78c782b30"
+  integrity sha512-Pewzg+h2lQxjPSl/pT+b5FMBKHNCgqJiTroUv+hR4YEBMjmkxW/sQUee15+xoNqVRcYpi3alSi9XGPrhSVXjXg==
   dependencies:
     "@emotion/core" "10.1.1"
     "@emotion/styled" "10.0.27"
@@ -3496,6 +3513,11 @@ gh-pages@^2.0.1:
     globby "^6.1.0"
     graceful-fs "^4.1.11"
     rimraf "^2.6.2"
+
+giphy-api@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/giphy-api/-/giphy-api-2.0.1.tgz#30ddeb68d1346a592d26878db2fbc7ba1686ef91"
+  integrity sha512-6FKx6y26W1OqPtEOohvr3MOqCcYWajmz/svrjWm6XW2eP9mHvcQoi4aFg5afCakVF2b7zVllP0aNF45CGHZn+A==
 
 glob-parent@^3.1.0:
   version "3.1.0"
